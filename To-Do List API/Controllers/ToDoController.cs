@@ -29,6 +29,18 @@ namespace To_Do_List_API.Controllers
             return Ok(item);
         }
 
+        [HttpPost("replace_all")]
+        public async Task<IActionResult> Upload([FromBody] List<ToDoItem> newTasks)
+        {
+            _dbcontext.ToDoItems.RemoveRange(_dbcontext.ToDoItems);
+
+            await _dbcontext.ToDoItems.AddRangeAsync(newTasks);
+
+            await _dbcontext.SaveChangesAsync();
+
+            return Ok(newTasks);
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -38,6 +50,17 @@ namespace To_Do_List_API.Controllers
             await _dbcontext.SaveChangesAsync();
             return Ok();
         }
+
+        [HttpDelete("delete_all")]
+        public async Task<IActionResult> DeleteAll()
+        {
+            _dbcontext.ToDoItems.RemoveRange(_dbcontext.ToDoItems);
+
+            await _dbcontext.SaveChangesAsync();
+
+            return Ok();
+        }
+
 
         [HttpPut("{id}/title")]
         public async Task<IActionResult> UpdateTitle(int id, [FromBody] string newTitle)

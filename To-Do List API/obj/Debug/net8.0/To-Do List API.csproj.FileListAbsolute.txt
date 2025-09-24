@@ -132,3 +132,4 @@ C:\Users\danil\source\repos\To-Do List API\To-Do List API\obj\Debug\net8.0\refin
 C:\Users\danil\source\repos\To-Do List API\To-Do List API\obj\Debug\net8.0\To-Do List API.pdb
 C:\Users\danil\source\repos\To-Do List API\To-Do List API\obj\Debug\net8.0\To-Do List API.genruntimeconfig.cache
 C:\Users\danil\source\repos\To-Do List API\To-Do List API\obj\Debug\net8.0\ref\To-Do List API.dll
+C:\Users\danil\source\repos\To-Do List API\To-Do List API\obj\Debug\net8.0\To-Do List API.sourcelink.json
